@@ -1,0 +1,42 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.categories h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #5c596d;
+}
+.categories_boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categories_boxes_box {
+  background: #f7f7f7;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid transparent;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.categories_boxes_box h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5C596D;
+}
+.categories_boxes_box:hover {
+  border: 2px solid #265fef;
+  transition: all 0.1s ease-in-out;
+}
+.categories_boxes_box:hover h1 {
+  color: #265fef;
+}/*# sourceMappingURL=categories.module.css.map */

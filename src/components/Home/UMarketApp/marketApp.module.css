@@ -1,0 +1,46 @@
+.wrapper {
+  width: 100%;
+  background: #e0e8ff;
+  height: 468px;
+}
+
+.downloadApps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.downloadApps h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+.downloadApps .logo_text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.downloadApps .logo_text h1 {
+  font-weight: 600;
+  font-size: 17.1121px;
+  line-height: 26px;
+  color: #5c596d;
+}
+.downloadApps .apps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+}
+
+.scaning {
+  display: flex;
+  align-items: center;
+}
+
+.qrCode {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5c596d;
+}/*# sourceMappingURL=marketApp.module.css.map */

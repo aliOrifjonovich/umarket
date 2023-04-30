@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  padding: 50px 72px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.container .image {
+  width: 100%;
+  border-radius: 8px;
+}/*# sourceMappingURL=banner.module.css.map */
