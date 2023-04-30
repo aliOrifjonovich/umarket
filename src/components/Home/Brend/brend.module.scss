@@ -1,6 +1,41 @@
 .wrapper {
-    display: flex;
+	display: flex;
 	flex-direction: column;
 	gap: 24px;
 	width: 100%;
+
+	h3 {
+		padding: 8px 16px;
+		text-align: center;
+		background: #f7f7f7;
+		border: 2px solid transparent;
+		border-radius: 4px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			border: 2px #1b5bf7 solid;
+			color: #1b5bf7;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	.brend_image {
+		border: 2px solid red;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #eae9ef;
+		border-radius: 4px;
+		height: 75px;
+		transition: all 0.1s ease-in-out;
+
+		&:hover{
+			border: #1b5bf7 2px solid;
+			transition: all 0.1s ease-in-out;
+		}
+	}
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import axios from "axios";
 
 import cls from "./popular.module.css";
 
@@ -10,45 +11,40 @@ import goods from "../../../assets/images/goods.png";
 import { Grid } from "@mui/material";
 
 const Popular = () => {
-	// const [products, setProducts] = useState([]);
+	const [products, setProducts] = useState([]);
 
-	// useEffect(() => {
-	// 	fetch("http://172.16.20.121:4000/popular_products", {
-	// 		headers: {},
-	// 		params: {},
-	// 		query: {}
-
-	// 	})
-	// 		.then((res) => res.json())
-	// 		.then((res) => console.log("res", res))
-	// 		.catch((err) => {
-	// 			throw err;
-	// 		});
-	// }, []);
+	useEffect(() => {
+		axios
+			.get("http://192.168.96.42:8000/popular_products?limit=1")
+			.then((res) => setProducts(res.data))
+			.catch((err) => {
+				console.log("err", err);
+			});
+	}, []);
 
 	return (
 		<div className="container">
 			<div className={cls.wrapper}>
 				<h1 className={cls.text}>Хиты продаж</h1>
 				<Grid container spacing={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }}>
-					{Array.from(Array(4)).map((_, index) => (
-						<Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+					{products.map((item) => (
+						<Grid item xs={12} sm={6} md={4} lg={3} key={item._id}>
 							<div className={cls.popular_products_product}>
 								<img
-									src={goods}
+									src={item.image}
 									alt="phoneImage"
 									className={cls.popular_image}
 								/>
-								<h2>Samsung Galaxy A41 Red 64 GB</h2>
+								<h2>{item.name}</h2>
 								<div className={cls.price}>
-									<h1>3 144 000 сум</h1>
-									<h3>От 385 000 сум/12 мес</h3>
+									<h1>{item.cost}</h1>
+									<h3>От {(item.cost / 12).toFixed(2)} сум/12 мес</h3>
 								</div>
 								<div className={cls.stars}>
 									<Stack spacing={1}>
 										<Rating
 											name="half-rating"
-											defaultValue={2.5}
+											defaultValue={item.rating}
 											precision={0.5}
 										/>
 									</Stack>

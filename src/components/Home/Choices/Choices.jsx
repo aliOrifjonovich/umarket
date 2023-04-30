@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
@@ -8,8 +8,17 @@ import cls from "../Popular/popular.module.css";
 import { BasketIcon, ComparisonIcon, FavoritesIcon } from "../../icons.js";
 import goods from "../../../assets/images/goods.png";
 import { Grid } from "@mui/material";
+import axios from "axios";
 
 const Choices = () => {
+	// const [products, setProducts] = useState([]);
+	
+	// useEffect(()=>{
+	// 	axios.get("http://192.168.96.42:8000/popular_products?limit=4").then((res)=>setProducts(res.data)).catch((err)=>{
+	// 		console.log("err", err)
+	// 	})
+	// })
+
 	return (
 		<div className="container">
 			<div className={cls.wrapper}>

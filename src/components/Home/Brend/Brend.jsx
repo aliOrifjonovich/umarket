@@ -1,7 +1,7 @@
 import React from 'react'
 import cls from "./brend.module.css"
 import Grid from "@mui/material/Grid"
-
+import BrendImages from "../../../assets/images/brands-2.png"
 const Brend = () => {
   return (
 		<div className="container">
@@ -10,25 +10,11 @@ const Brend = () => {
 					container
 					rowSpacing={1}
 					columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-					sx={{ width: "100%" }}>
-					<Grid
-						item
-						xs={6}
-						sm={4}
-						md={3}
-						lg={1.5}
-						xl={1.5}
-						sx={{ border: "red 2px solid" }}>
+					sx={{ width: "100%", display: "flex", alignItems: "center" }}>
+					<Grid item xs={6} sm={4} md={3} lg={1.5} xl={1.5}>
 						<h3>Телефоны</h3>
 					</Grid>
-					<Grid
-						item
-						xs={6}
-						sm={4}
-						md={3}
-						lg={1.5}
-						xl={1.5}
-						sx={{ border: "red 2px solid" }}>
+					<Grid item xs={6} sm={4} md={3} lg={1.5} xl={1.5}>
 						<h3>Аксессуары</h3>
 					</Grid>
 					<Grid item xs={6} sm={4} md={3} lg={1.5} xl={1.5}>
@@ -49,6 +35,18 @@ const Brend = () => {
 					<Grid item xs={6} sm={4} md={3} lg={1.5} xl={1.5}>
 						<h3>Обувь</h3>
 					</Grid>
+				</Grid>
+
+				<Grid
+					container
+					spacing={{ xs: 2, md: 3 }}>
+					{Array.from(Array(16)).map((_, index) => (
+						<Grid item xs={6} sm={4} md={3} lg={1.5} xl={1.5} key={index}>
+							<div className={cls.brend_image}>
+								<img src={BrendImages} alt="BrendsImage" />
+							</div>
+						</Grid>
+					))}
 				</Grid>
 			</div>
 		</div>
