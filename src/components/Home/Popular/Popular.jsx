@@ -7,7 +7,7 @@ import axios from "axios";
 import cls from "./popular.module.css";
 
 import { BasketIcon, ComparisonIcon, FavoritesIcon } from "../../icons.js";
-import goods from "../../../assets/images/goods.png";
+// import goods from "../../../assets/images/goods.png";
 import { Grid } from "@mui/material";
 
 const Popular = () => {
