@@ -15,7 +15,7 @@ const Popular = () => {
 
 	useEffect(() => {
 		axios
-			.get("http://192.168.96.42:8000/popular_products?limit=1")
+			.get("http://192.168.96.42:8000/popular_products?limit=4")
 			.then((res) => setProducts(res.data))
 			.catch((err) => {
 				console.log("err", err);

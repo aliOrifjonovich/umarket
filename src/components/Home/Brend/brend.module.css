@@ -22,11 +22,10 @@
   transition: all 0.2s ease-in-out;
 }
 .wrapper .brend_image {
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #eae9ef;
+  border: 2px solid #eae9ef;
   border-radius: 4px;
   height: 75px;
   transition: all 0.1s ease-in-out;
@@ -34,4 +33,11 @@
 .wrapper .brend_image:hover {
   border: #1b5bf7 2px solid;
   transition: all 0.1s ease-in-out;
+}
+
+.marquee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }/*# sourceMappingURL=brend.module.css.map */
